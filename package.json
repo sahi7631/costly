@@ -1,0 +1,17 @@
+{
+  "name": "costly",
+  "version": "1.0.0",
+  "description": "\"Daily expenses tracker\" ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test "
+  },
+  "author": "roushan kumar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.3"
+  }
+}
