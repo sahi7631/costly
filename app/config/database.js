@@ -1,7 +1,10 @@
 const { Client } = require('pg'); 
+const config = require('../config/config');
 const client = new Client({
-    connectionString: process.env.DATABASE_URL,
-    ssl: true,
+    connectionString: config.connectionString,
+    ssl: false,
 });
-client.connect();
+client.connect().then(res => {
+    console.log(res);
+});
 module.exports = client;

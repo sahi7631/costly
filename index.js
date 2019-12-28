@@ -17,7 +17,16 @@ app.get("/", (req,res) => {
         "`email` VARCHAR(50)" +
         "`password` VARCHAR(255" + 
         "PRIMARY KEY ('mobileNumber') )"
-    let res = await db.query(loginTable, )
+      db.query(loginTable, (res, err) => {
+          console.log(err);
+          console.log(err);
+        //   if(err){
+        //       throw new Error("Some thing Went Wrong !");
+        //   } else {
+        //     console.log("Result");
+        //     console.log(result);
+        //   }
+      });
    res.json({
        status: 200,
        message: "Welcome to Costly Server !",
