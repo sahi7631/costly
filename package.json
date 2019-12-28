@@ -4,7 +4,8 @@
   "description": "\"Daily expenses tracker\" ",
   "main": "index.js",
   "scripts": {
-    "test": "npm test "
+    "test": " npm test ",
+    "start": " node index.js"
   },
   "author": "roushan kumar",
   "license": "ISC",
@@ -13,5 +14,9 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.3"
+  },
+  "engines": {
+    "node": "10.x",
+    "npm": "5.x"
   }
 }
