@@ -1,10 +1,13 @@
-const { Client } = require('pg'); 
-const config = require('../config/config');
-const client = new Client({
-    connectionString: config.connectionString,
-    ssl: false,
+const { Pool } = require('pg'); 
+const global = require('./config');
+const  pool = new Pool({
+    user: global.config.user,
+    database: global.config.database,
+    password: global.config.password,
+    host: global.config.host,
+    port: global.config.port,
+    max: global.config.max,
+    idleTimeoutMillis: global.config.idleTimeoutMillis,
+    ssl: true,
 });
-client.connect().then(res => {
-    console.log(res);
-});
-module.exports = client;
+module.exports = pool;
