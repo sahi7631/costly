@@ -1,9 +1,7 @@
-module.exports = (router) => {
-    router.post('/register', (req,res) => {
+module.exports = (app) => {
+    app.post('/api/v1/register', (req, res) => {
         let userInfo = req.body;
-        console.log("User Info !!");
-        console.log(userInfo);
-        if(userInfo){
+        if (userInfo) {
             res.json({
                 status: 200,
                 message: "User Register Sucessfully !",
